@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --system-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  font-family: var(--system-ui);
+}
+code {
+  font-family: var(--system-monospace);
+}
+
+
+/* Markdown */
+/* Base Typography */
+.markdown {
+  @apply text-base text-gray-900;
+}
+
+/* Headings */
+.markdown h1 {
+  @apply text-4xl font-bold border-b border-gray-200 pb-2 my-4;
+}
+.markdown div > h1:first-child {
+  @apply mt-0;
+}
+.markdown h2 {
+  @apply text-3xl font-bold mt-4 mb-2;
+}
+.markdown h3 {
+  @apply text-2xl font-bold mt-4 mb-2;
+}
+.markdown h4 {
+  @apply text-xl font-bold mt-4;
+}
+.markdown h5 {
+  @apply text-lg font-bold mt-4;
+}
+.markdown h6 {
+  @apply text-base font-bold mt-4;
+}
+
+/* Paragraph */
+.markdown p {
+  @apply my-2;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600;
+}
+
+/* Lists */
+.markdown ul {
+  @apply list-disc list-inside my-2;
+}
+.markdown ol {
+  @apply list-decimal list-inside my-2;
+}
+
+/* Code Blocks */
+.markdown pre {
+  @apply p-4 font-mono text-sm bg-gray-100 rounded-md my-2;
+}
+.markdown code {
+  @apply bg-gray-50 rounded py-1 px-2;
+}
+
+/* Inline Code */
+.markdown p > code, .markdown li > code {
+  @apply bg-gray-50 rounded py-1 px-2;
+}
+
+/* Tables */
+.markdown table {
+  @apply min-w-full divide-y divide-gray-300 my-4;
+}
+.markdown thead th {
+  @apply text-left font-semibold bg-gray-50 p-2;
+}
+.markdown tbody td {
+  @apply p-2;
+}
+.markdown tbody tr {
+  @apply hover:bg-gray-50;
+}
+
+/* Links */
+.markdown a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+/* Images */
+.markdown img {
+  @apply max-w-full h-auto my-4;
+}
+
+/* Thematic Breaks (Horizontal Rules) */
+.markdown hr {
+  @apply my-4 border-gray-300;
+}
+
+/* Github Flavored Markdown Extras */
+
+/* Task Lists */
+/* .markdown .task-list-item {
+  @apply list-none;
+}
+.markdown .task-list-item-checkbox {
+  @apply form-checkbox text-blue-600;
+} */
+
+/* Strikethrough */
+.markdown s {
+  @apply line-through;
+}
+
+/* Horizontal Rules */
+.markdown hr {
+  @apply my-4 border-gray-300;
+}
+
+/* Additional GitHub Specific Styles */
+
+/* GFM table styling */
+.markdown table {
+  @apply border-collapse;
+}
+.markdown table th,
+.markdown table td {
+  @apply border px-4 py-2;
+}
+
+/* GFM blockquote styling */
+.markdown blockquote {
+  @apply border-l-4 bg-gray-50 text-gray-600 px-4 py-2;
+}
+
+/* GFM code styling */
+.markdown pre code {
+  @apply bg-transparent p-0;
+}
+
+/* GFM inline code styling */
+.markdown p code,
+.markdown li code {
+  @apply bg-gray-200 rounded-md;
+}
